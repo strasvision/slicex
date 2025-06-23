@@ -1,52 +1,146 @@
-# Video Style Analysis and Classification
+# SliceX - Advanced Video Style Analysis
 
-This project provides tools for analyzing and classifying video editing styles using machine learning. It includes utilities for extracting video features (scene cuts, audio features, motion analysis), training classification models, and making predictions on new videos.
+![Python Version](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-The system is designed to work with small datasets and provides interpretable results about the editing style of input videos.
+SliceX is a powerful tool for analyzing and extracting features from videos, designed for video editors, content creators, and researchers. It provides comprehensive analysis of video content including scene detection, audio features, visual characteristics, and motion analysis.
 
-## Project Structure
+## ✨ Features
 
+- **Scene Detection**: Automatically detect scene changes using advanced algorithms
+- **Audio Analysis**: Extract detailed audio features including music/speech classification
+- **Visual Features**: Analyze color distribution, brightness, contrast, and more
+- **Motion Analysis**: Detect camera movements and motion patterns
+- **Zoom Detection**: Identify zoom effects and their characteristics
+- **Command Line Interface**: Easy-to-use CLI for processing videos
+- **Batch Processing**: Process multiple videos or entire directories
+- **CSV Export**: Save analysis results in a structured format
+
+## 🚀 Installation
+
+### Prerequisites
+
+- Python 3.8, 3.9, or 3.10
+- FFmpeg (for audio extraction)
+
+### Using pip
+
+```bash
+pip install slicerx
 ```
-video-style-project/
-├── data/
-│   ├── raw_videos/          # Input MP4 videos
-│   ├── processed/           # Processed data and features
-│   └── annotations/         # JSON annotations and metadata
-├── models/                  # Trained models and scalers
-│   └── style_classifier/    # Best model and artifacts
-│       ├── best_model.joblib    # Trained model
-│       ├── scaler.joblib        # Feature scaler
-│       ├── selected_features.txt # Features used for training
-│       └── training_summary.json # Training metrics
-├── scripts/
-│   ├── extract_metadata.py     # Extract video metadata
-│   ├── flatten_json.py         # Process nested JSON data
-│   ├── train_model.py          # Train style classification model
-│   ├── predict_style_sklearn.py # Make predictions (recommended)
-│   └── feature_extraction.py   # Feature extraction utilities
-├── notebooks/               # Jupyter notebooks for exploration
-├── requirements.txt         # Project dependencies
-└── README.md               # This file
-```
 
-## Setup
+### From Source
 
-1. Create and activate a virtual environment:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/strasvision/slicex.git
+   cd slicex
+   ```
+
+2. Create and activate a virtual environment:
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
-2. Install system dependencies (macOS):
+3. Install with development dependencies:
    ```bash
-   # Install ffmpeg for video processing
-   brew install ffmpeg
+   pip install -e .[dev]
    ```
 
-3. Install Python dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🛠️ Usage
+
+### Basic Usage
+
+```bash
+# Extract features from a single video
+slicerx-extract input_video.mp4 --output features.csv
+
+# Process all videos in a directory
+slicerx-extract path/to/videos/ --recursive --output output/
+```
+
+### Command Line Options
+
+```
+usage: slicerx-extract [-h] [--output OUTPUT] [--threshold THRESHOLD] [--sample-rate SAMPLE_RATE] [--recursive] video_path
+
+Extract features from video files.
+
+positional arguments:
+  video_path            Path to the input video file or directory
+
+options:
+  -h, --help            show this help message and exit
+  --output OUTPUT, -o OUTPUT
+                        Output CSV file or directory (default: output/features.csv)
+  --threshold THRESHOLD, -t THRESHOLD
+                        Threshold for scene detection (default: 30.0)
+  --sample-rate SAMPLE_RATE, -s SAMPLE_RATE
+                        Frames per second to sample (default: 1.0)
+  --recursive, -r       Process videos in subdirectories recursively
+```
+
+## 📊 Features Extracted
+
+### Audio Features
+- RMS Energy
+- Zero Crossing Rate
+- Spectral Features (Centroid, Bandwidth, Rolloff, Flatness)
+- MFCCs (Mel-frequency cepstral coefficients)
+- Chroma Features
+- Tempo Estimation
+- Music/Speech Classification
+
+### Visual Features
+- Brightness, Contrast, Sharpness
+- Color Histograms (RGB, HSV, LAB)
+- Edge and Corner Density
+- Motion Intensity and Direction
+- Zoom Detection
+- Composition Analysis (Rule of Thirds)
+
+### Scene Information
+- Scene Boundaries
+- Duration
+- Shot Transitions
+
+## 🏗️ Project Structure
+
+```
+slicex/
+├── scripts/                  # Main Python scripts
+│   ├── extract_features.py    # Feature extraction pipeline
+│   ├── train_model.py         # Model training
+│   └── predict_style.py       # Style prediction
+├── tests/                     # Test files
+├── models/                    # Pre-trained models
+├── data/                      # Example data
+├── requirements.txt           # Production dependencies
+└── setup.py                   # Package configuration
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with Python and OpenCV
+- Uses PySceneDetect for scene detection
+- Audio analysis powered by LibROSA
+- Inspired by video content analysis research
 
    The main dependencies include:
    - scikit-learn: For machine learning models
