@@ -1,0 +1,35 @@
+2025-06-21 17:54:10,369 - ERROR - Error processing CSV: 'NoneType' object has no attribute 'strip'
+2025-06-21 17:55:27,641 - WARNING - No URL found in row 1
+2025-06-21 17:55:27,641 - WARNING - No URL found in row 2
+2025-06-21 17:55:27,641 - WARNING - No URL found in row 3
+2025-06-21 17:55:27,641 - WARNING - No URL found in row 4
+2025-06-21 17:55:27,641 - WARNING - No URL found in row 5
+2025-06-21 17:55:27,641 - INFO - Reached download limit of 5 videos
+2025-06-21 17:58:12,666 - INFO - Found potential shortcode in row 1, column 'caption': https://www.instagram.com/p/Opensource/
+2025-06-21 17:58:12,666 - INFO - Processing 1/5: Opensource
+2025-06-21 17:58:12,673 - WARNING - No saved Instagram session found. Some content may not be accessible.
+2025-06-21 17:58:12,673 - INFO - Downloading Instagram post Opensource (attempt 1/3)
+2025-06-21 17:58:15,087 - ERROR - Instaloader error: Fetching Post metadata failed.
+2025-06-21 17:58:15,087 - INFO - Waiting 2.6s before retry...
+2025-06-21 17:58:17,667 - INFO - Downloading Instagram post Opensource (attempt 2/3)
+2025-06-21 17:58:18,771 - ERROR - Instaloader error: Fetching Post metadata failed.
+2025-06-21 17:58:18,772 - INFO - Waiting 4.7s before retry...
+2025-06-21 17:58:23,463 - INFO - Downloading Instagram post Opensource (attempt 3/3)
+2025-06-21 17:58:25,400 - ERROR - Instaloader error: Fetching Post metadata failed.
+2025-06-21 17:58:25,400 - ERROR - Failed to download Opensource after 3 attempts
+2025-06-21 17:58:27,405 - WARNING - No Instagram URL found in row 2. Sample columns: {'\ufeff"alt"': 'Google just surprised everyone by releasing a secret new app. It lets you run AI models right on your phone—no internet needed. And it’s totally free.', 'caption': None, 'commentsCount': None}
+2025-06-21 17:58:27,405 - WARNING - No Instagram URL found in row 3. Sample columns: {'\ufeff"alt"': 'You can find it on GitHub for now. The app is called Google AI Edge Gallery. It’s open source and made for Android. Right now', 'caption': ' it’s in testing', 'commentsCount': ' but anyone can try it.'}
+2025-06-21 17:58:27,406 - WARNING - No Instagram URL found in row 4. Sample columns: {'\ufeff"alt"': 'To get started', 'caption': ' just download the app. Inside', 'commentsCount': ' you pick any AI model you like. There’s even Google’s new Gemma 3N models. These are built to work well on regular phones.'}
+2025-06-21 17:58:27,406 - INFO - Found potential shortcode in row 5, column 'commentsCount': https://www.instagram.com/p/Everything/
+2025-06-21 17:58:27,406 - INFO - Processing 5/5: Everything
+2025-06-21 17:58:27,407 - WARNING - No saved Instagram session found. Some content may not be accessible.
+2025-06-21 17:58:27,408 - INFO - Downloading Instagram post Everything (attempt 1/3)
+2025-06-21 17:58:28,878 - ERROR - Instaloader error: Fetching Post metadata failed.
+2025-06-21 17:58:28,882 - INFO - Waiting 2.1s before retry...
+2025-06-21 17:58:30,979 - INFO - Downloading Instagram post Everything (attempt 2/3)
+2025-06-21 17:58:36,050 - ERROR - Instaloader error: Fetching Post metadata failed.
+2025-06-21 17:58:36,053 - INFO - Waiting 4.8s before retry...
+2025-06-21 17:58:40,851 - INFO - Downloading Instagram post Everything (attempt 3/3)
+2025-06-21 17:58:47,477 - ERROR - Instaloader error: Fetching Post metadata failed.
+2025-06-21 17:58:47,477 - ERROR - Failed to download Everything after 3 attempts
+2025-06-21 17:58:49,488 - INFO - Reached download limit of 5 videos

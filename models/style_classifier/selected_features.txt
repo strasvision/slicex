@@ -1,0 +1,15 @@
+avg_cut_interval
+avg_scene_length
+b_roll_usage
+beat_density
+max_cut_interval
+max_scene_length
+min_cut_interval
+min_scene_length
+num_broll_scenes
+num_human_scenes
+num_scenes
+scene_length_std
+total_duration
+transition_pct_cut
+transition_pct_fade
